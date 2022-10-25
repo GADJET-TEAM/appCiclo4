@@ -1,8 +1,10 @@
 NOMBRE DEL PROYECTO: touristapp
 
-DESCRIPCION: Proyecto del Sprint 2 del Ciclo 4b: Desarrollo móvil.
+ESTADO: Inicial.
 
-ARCHIVOS DE INTERES: Para el desarrollo del Sprint 2 se hace énfasis en los siguientes archivos:
+DESCRIPCION: Bases para Proyecto del Ciclo 4b: Desarrollo móvil.
+
+ARCHIVOS DE INTERES: Las bases comienzan con el Sprint 2 con énfasis en los siguientes archivos:
 
     1. assets: 
         A) Ruta relativa: touristapp\assets
@@ -22,8 +24,8 @@ ARCHIVOS DE INTERES: Para el desarrollo del Sprint 2 se hace énfasis en los sig
                       de conversión a tipo json. A continuación se muestran los modelos utilizados:
 
                       + user.dart: Con este se modela el nombre (name), correo (email), contraseña (password), 
-                                   genero(genre) del usuario, así como su género literario favorito
-                                   (favoriteBooktype) y fecha de nacimiento (birthdate).
+                                   genero(genre) del usuario, y fecha de nacimiento (birthdate).
+                                   
             
             * pages: Contiene las diferentes interfaces de usuarios (Son las diferentes "pantallas de vision" 
                      que se mostrarán en el celular.
@@ -42,8 +44,8 @@ ARCHIVOS DE INTERES: Para el desarrollo del Sprint 2 se hace énfasis en los sig
                                           es que después de dar click en la opción de "Sign up" de la 
                                           pantalla del login pueda mostrar una pantalla con los campos 
                                           necesarios para poder registrarse: name, email, password, genre, 
-                                          favorite booktypes y birthdate. Después de registrado se 
-                                          redirigirá a la pantalla del Login.
+                                          y birthdate. Después de registrado se redirigirá a la pantalla
+                                          del Login.
 
                     + home_page.dart: Cuarta interfaz que ve el usuario. La meta con el código de esta 
                                       interfaz es que después de que el login sea exitoso se logre mostrar 
