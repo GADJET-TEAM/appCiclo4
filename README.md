@@ -1,18 +1,18 @@
-OMBRE DEL PROYECTO: touristapp
+NOMBRE DEL PROYECTO: touristapp
 
 DESCRIPCION: Proyecto del Sprint 2 del Ciclo 4b: Desarrollo móvil.
 
 ARCHIVOS DE INTERES: Para el desarrollo del Sprint 2 se hace énfasis en los siguientes archivos:
 
     1. assets: 
-        A) Ruta relativa: p4_mis_libros\assets
+        A) Ruta relativa: touristapp\assets
         B) ¿Archivo preexistente?: NO. Para ello se deberá crearlo manualmente, así como sus "subdirectorios".
         C) Característica: Este directorio contiene todo lo referente a imágenes, música, videos, etc.
         D) "Subdirectorios" de interés:
             * images: Contiene las imágenes a ser usadas en el Home_Page y Logo.
 
     2. lib:
-        A) Ruta relativa: p4_mis_libros\lib
+        A) Ruta relativa: touristapp\lib
         B) ¿Archivo preexistente?: SI. Solo se crea dentro de este los "subdirectorios" de models y pages.
         C) Característica: Contiene los models, pages (archivos .dart importantes para las interfaces) 
                            y el main.dart
@@ -54,12 +54,12 @@ ARCHIVOS DE INTERES: Para el desarrollo del Sprint 2 se hace énfasis en los sig
                          referente a la configuración de la fecha y de inicio de la app en el splash.
     
     3.pubspec.yaml:
-        A) Ruta relativa: p4_mis_libros\pubspec.yaml
+        A) Ruta relativa: touristapp\pubspec.yaml
         B)¿Archivo preexistente?: SI.
         C) Característica: Contiene las dependencias y configuraciones necesarias para que funcione la app.
 
     4. Archivos mipmap
-        A) Ruta relativa: p4_mis_libros\android\app\src\main\res
+        A) Ruta relativa: touristapp\android\app\src\main\res
         B) ¿Archivo preexistente?: SI, pero con la imagen de flutter. Para cambio de imagen es necesario 
             crear los mipmaps en https://icon.kitchen.
         C) Característica: Son archivos que contienen la imagen del icono de la app.
