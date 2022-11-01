@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "945463396714",
+    "project_id": "parte-gerard3",
+    "storage_bucket": "parte-gerard3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945463396714:android:c315b4c8f014b60ea3fd13",
+        "android_client_info": {
+          "package_name": "com.geremmanuel9.p5_mis_libros2a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945463396714-5nvrnopribcv5ahq4it0afn4t2ttu27j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxp6_7YH0OuFQbZ63gTZlcXzGirbAeplo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945463396714-5nvrnopribcv5ahq4it0afn4t2ttu27j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
