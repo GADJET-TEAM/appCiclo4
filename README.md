@@ -75,3 +75,6 @@ ARCHIVOS: Para el Sprint 3 se desarrollaron los siguientes archivos:
         C) Modificación: Se agregó en la línea 50 lo siguiente: minSdkVersion 19; y en la línea 54:
                          multiDexEnabled true
     5 . se modificaron la autenticacion en firebase en el login_page
+    6. subi mis otros archivos
+
+    5 . se modificaron la autenticacion en firebase en el login_page
