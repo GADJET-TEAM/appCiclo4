@@ -1,9 +1,11 @@
+import 'package:touristapp/models/local_site.dart';
+import 'package:touristapp/pages/favorites_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:touristapp/pages/Home_page.dart';
-import 'package:touristapp/models/site.dart';
 import 'package:touristapp/pages/login_page.dart';
+import '../models/boxes.dart';
 
 class PoiDetailsPage extends StatefulWidget {
   late QueryDocumentSnapshot capturingDatas;
@@ -18,13 +20,73 @@ class PoiDetailsPage extends StatefulWidget {
 enum Menu{logOut}
 
 class _PoiDetailsPageState extends State<PoiDetailsPage> {
+
+  var isFavorite = false;
+
+  @override
+  void initState() {
+    _getLocalSite();
+    super.initState();
+  }
+
+  void _getLocalSite(){
+    final box = Boxes.getFavoritesBox();
+    box.values.forEach((element) {
+      if (element.id == widget.capturingDatas.id){
+        isFavorite = true;
+      }
+    });
+  }
+
+  void _onFavoritesButtonClicked() async{
+
+    var localSite = LocalSite()
+      ..id = widget.capturingDatas['id']
+      ..nameSite = widget.capturingDatas['nameSite']
+      ..generalDescription = widget.capturingDatas['generalDescription']
+      ..photo = widget.capturingDatas['photo']
+      ..rating = widget.capturingDatas['rating'].toDouble()
+      ..town = widget.capturingDatas['town']
+      ..department = widget.capturingDatas['department']
+      ..detailedDescription = widget.capturingDatas['detailedDescription']
+      ..moreInformation = widget.capturingDatas['moreInformation']
+      ..latitude = widget.capturingDatas['latitude']
+      ..longitude = widget.capturingDatas['longitude'];
+
+    final box = Boxes.getFavoritesBox();
+    //box.add(localSite);
+
+    if (isFavorite){
+      box.delete(localSite.id);
+    } else{
+      box.put(localSite.id, localSite);
+    }
+
+    setState(() {
+      isFavorite = !isFavorite;
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Tourist Sites"),
+        title: const Text("Details of Site"),
         backgroundColor: Colors.purpleAccent,
         actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+            },
+            icon: const Icon(Icons.home),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const FavoritesPage()));
+            },
+            icon: const Icon(Icons.favorite),
+          ),
           PopupMenuButton(
             onSelected: (Menu item){
               setState(() {
@@ -58,7 +120,35 @@ class _PoiDetailsPageState extends State<PoiDetailsPage> {
                       ),
                     ),
                     const SizedBox(height: 20.0,),
+                    Row(
+                        children:[
+                          Expanded(
+                              child: IconButton(
+                                alignment: Alignment.topRight,
+                                icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
+                                color: Colors.red,
+                                onPressed: ((){
+                                  _onFavoritesButtonClicked();
+                                }),
+                              )
+                          ),
+                        ]
+                    ),
                     Image(image: AssetImage(widget.capturingDatas['photo']),width: 250,),
+                    Row(
+                        children:[
+                          Expanded(
+                              child: IconButton(
+                                alignment: Alignment.topRight,
+                                icon: const Icon(Icons.location_on_outlined),
+                                color: Colors.red,
+                                onPressed: ((){
+                                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  LocationPage(widget.capturingDatas)));
+                                }),
+                              )
+                          ),
+                        ]
+                    ),
                     const SizedBox(height: 16.0,),
                     Row(
                       children:<Widget> [
@@ -118,6 +208,7 @@ class _PoiDetailsPageState extends State<PoiDetailsPage> {
                     ),
                     Text(
                       widget.capturingDatas['detailedDescription'],
+                      textAlign: TextAlign.justify,
                       style: const TextStyle(
                           fontSize: 20,
                           color: Colors.purple
@@ -144,6 +235,7 @@ class _PoiDetailsPageState extends State<PoiDetailsPage> {
                     ),
                     Text(
                       widget.capturingDatas['moreInformation'],
+                      textAlign: TextAlign.justify,
                       style: const TextStyle(
                           fontSize: 20,
                           color: Colors.purple
@@ -156,4 +248,7 @@ class _PoiDetailsPageState extends State<PoiDetailsPage> {
       ),
     );
   }
+}
+
+class LocationPage {
 }
