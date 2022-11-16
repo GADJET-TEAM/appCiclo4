@@ -1,11 +1,9 @@
 import 'package:touristapp/pages/poidetails_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:touristapp/pages/login_page.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:touristapp/models/site.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -86,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                         trailing: const Icon(Icons.arrow_forward_rounded),
                         enabled: true,
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => PoiDetailsPage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => PoiDetailsPage(site)));
                         },
                       ),
                     );
