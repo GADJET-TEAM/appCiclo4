@@ -111,4 +111,4 @@ class Site {
   set latitude(value) {
     _latitude = value;
   }
-}}
+}
