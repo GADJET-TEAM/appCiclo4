@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "554266889529",
-    "project_id": "ttouristapp",
-    "storage_bucket": "ttouristapp.appspot.com"
+    "project_number": "988841955872",
+    "project_id": "appciclo4-3bbd1",
+    "storage_bucket": "appciclo4-3bbd1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:554266889529:android:5e08cbe45012f3fc896ce8",
+        "mobilesdk_app_id": "1:988841955872:android:4ce9723f4f1f43d2326245",
         "android_client_info": {
           "package_name": "com.example.touristapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "554266889529-dbc0ohij991j7jpht3p9t34r3p49vbg5.apps.googleusercontent.com",
+          "client_id": "988841955872-7us0lspn7hgdvsl0oicuoovp3lntsb0l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC9MqXe_af9mkZzujOD3rVjybzdasHH8uM"
+          "current_key": "AIzaSyDvigU84V1DBhp0iSjqtWVNbNOPg7AvTcE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "554266889529-dbc0ohij991j7jpht3p9t34r3p49vbg5.apps.googleusercontent.com",
+              "client_id": "988841955872-7us0lspn7hgdvsl0oicuoovp3lntsb0l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

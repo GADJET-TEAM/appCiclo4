@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC9MqXe_af9mkZzujOD3rVjybzdasHH8uM',
-    appId: '1:554266889529:android:5e08cbe45012f3fc896ce8',
-    messagingSenderId: '554266889529',
-    projectId: 'ttouristapp',
-    storageBucket: 'ttouristapp.appspot.com',
+    apiKey: 'AIzaSyDvigU84V1DBhp0iSjqtWVNbNOPg7AvTcE',
+    appId: '1:988841955872:android:4ce9723f4f1f43d2326245',
+    messagingSenderId: '988841955872',
+    projectId: 'appciclo4-3bbd1',
+    storageBucket: 'appciclo4-3bbd1.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDrYZQnXKcOgfjsMPXJO2XFGnVw3Vgytqs',
-    appId: '1:554266889529:ios:00c2795d4c4f2666896ce8',
-    messagingSenderId: '554266889529',
-    projectId: 'ttouristapp',
-    storageBucket: 'ttouristapp.appspot.com',
-    iosClientId: '554266889529-1gnb3c4gip0nk5luvv9pep37mp21uvjd.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCRTiYbBXcn6WXT4omKCBuRSqhG8Rcb_uw',
+    appId: '1:988841955872:ios:8484f9541643c1d9326245',
+    messagingSenderId: '988841955872',
+    projectId: 'appciclo4-3bbd1',
+    storageBucket: 'appciclo4-3bbd1.appspot.com',
+    iosClientId: '988841955872-d881l4k1ai92h0jnu34ia27gtv58fdv5.apps.googleusercontent.com',
     iosBundleId: 'com.example.touristapp',
   );
 }
