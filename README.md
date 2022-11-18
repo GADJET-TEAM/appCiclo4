@@ -1,67 +1,115 @@
-NOMBRE DEL PROYECTO: touristapp
+# Proyecto touristapp
 
-ESTADO: Inicial.
+### 1. DESCRIPCION 
 
-DESCRIPCION: Bases para Proyecto del Ciclo 4b: Desarrollo móvil.
+Proyecto de desarrollo móvil del ciclo 4b, realizado por el equipo GADJET TEAM, Universidad 
+de Antioquia, Misión Tic 2022, correspondiente a una app que muestra una lista de sitios turísticos
+de la ciudad de San Andrés e información detallada cuando se selecciona un sitio en particular.
+Para acceder el usuario deberá primero registrarse y luego realizar el proceso de login. La app 
+cuenta con la opción de visualizarlos en Google maps y de marcarlos como favoritos.
 
-ARCHIVOS DE INTERES: Las bases comienzan con el Sprint 2 con énfasis en los siguientes archivos:
+Para ver la funcionalidad de la app se puede ver el video el cual se encuentra en la rama main
+de este repositorio, o en el siguiente link:
 
-    1. assets: 
-        A) Ruta relativa: touristapp\assets
-        B) ¿Archivo preexistente?: NO. Para ello se deberá crearlo manualmente, así como sus "subdirectorios".
-        C) Característica: Este directorio contiene todo lo referente a imágenes, música, videos, etc.
-        D) "Subdirectorios" de interés:
-            * images: Contiene las imágenes a ser usadas en el Home_Page y Logo.
+https://drive.google.com/file/d/1OKcmbxJXc1-dlhoKk_bRW_OqP5so1Jo5/view?usp=share_link
 
-    2. lib:
-        A) Ruta relativa: touristapp\lib
-        B) ¿Archivo preexistente?: SI. Solo se crea dentro de este los "subdirectorios" de models y pages.
-        C) Característica: Contiene los models, pages (archivos .dart importantes para las interfaces) 
-                           y el main.dart
-        D) "Subdirectorios" de interés:
+### 2. FRAMEWORKS, LENGUAJES Y HERRAMIENTAS DE DESARROLLO
 
-            * models: Es utilizada para modelación de atributos, constructores, getters, setters y métodos
-                      de conversión a tipo json. A continuación se muestran los modelos utilizados:
+ * Android Studio
+ * Flutter
+ * Dart
+ * Firebase Authentication
+ * Firestore Database
+ * Hive
+ * Api Google Maps
 
-                      + user.dart: Con este se modela el nombre (name), correo (email), contraseña (password), 
-                                   genero(genre) del usuario, y fecha de nacimiento (birthdate).
-                                   
-            
-            * pages: Contiene las diferentes interfaces de usuarios (Son las diferentes "pantallas de vision" 
-                     que se mostrarán en el celular.
+### 3. DESARROLLO DE LA APP 
 
-                     + splash_page.dart: Primer interfaz que el usuario ve en la app. El objetivo con el 
-                                         código aquì es mostrar el logo ampliado de la app durante 2-3 seg 
-                                         antes de mostrar la pantalla del login.
+El proyecto touristapp se realizó empleando la metodología SCRUM en 4 Sprints. El desarrollo de cada 
+Sprint queda incorporado en las ramas de este repositorio denominados Sprint1, Sprint2, Sprint3 y 
+Sprint4. A parte del código, cada rama de los Sprints contiene una carpeta con las indicaciones de 
+realización, informe y video que muestra los resultados que se fueron logrando con cada Sprint, asì
+como un readme donde se describe los archivos que se desarrollaron.
 
-                     + login_page.dart: Segunda interfaz que ve el usuario. El propósito con el código aquí 
-                                        es mostrar los campos para diligenciar correo y contraseña que 
-                                        permitan entrar a la siguiente pantalla: home_page.dart. Aquì 
-                                        tambien contiene la opción Sign up para registrarse (Es decir si 
-                                        el usuario usa la app por primera vez).
+El código completo de la app está en la rama main. En los Sprints se solucionaron las siguientes
+historias de usuario:
 
-                     + register_page.dart: Tercera interfaz que ve el usuario. La función con el código aquí, 
-                                          es que después de dar click en la opción de "Sign up" de la 
-                                          pantalla del login pueda mostrar una pantalla con los campos 
-                                          necesarios para poder registrarse: name, email, password, genre, 
-                                          y birthdate. Después de registrado se redirigirá a la pantalla
-                                          del Login.
+#### A. Sprint 1: Administración del Proyecto en Github.
 
-                    + home_page.dart: Cuarta interfaz que ve el usuario. La meta con el código de esta 
-                                      interfaz es que después de que el login sea exitoso se logre mostrar 
-                                      una pantalla con datos de un punto de interés turístico de la ciudad 
-                                      elegida.
-            
-            * main.dart: Es el archivo predeterminado que trae Flutter. Aquí solo se agrega código 
-                         referente a la configuración de la fecha y de inicio de la app en el splash.
-    
-    3.pubspec.yaml:
-        A) Ruta relativa: touristapp\pubspec.yaml
-        B)¿Archivo preexistente?: SI.
-        C) Característica: Contiene las dependencias y configuraciones necesarias para que funcione la app.
+ + Historia de usuario 1 (HU_01)
 
-    4. Archivos mipmap
-        A) Ruta relativa: touristapp\android\app\src\main\res
-        B) ¿Archivo preexistente?: SI, pero con la imagen de flutter. Para cambio de imagen es necesario 
-            crear los mipmaps en https://icon.kitchen.
-        C) Característica: Son archivos que contienen la imagen del icono de la app.
+    Rol: Como administrador
+
+    Funcionalidad: deseo crear un repositorio
+
+    Razón: para llevar un control de las versiones del proyecto
+
+ + Historia de usuario 2 (HU_02)
+
+    Rol: Como administrador
+
+    Funcionalidad: deseo crear un espacio de trabajo
+
+    Razón: para administrar el proyecto
+
+#### B. Sprint 2: Interfaces de usuario.
+
++ Historia de usuario 3 (HU_03)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo navegar en el sistema de Login
+
+  Razón: para tener acceso a la aplicación móvil
+
++ Historia de usuario 4 (HU_04)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo ver el detalle de una POI (Point of interés)
+
+  Razón: para tener la posibilidad de visualizar más información del sitio
+
+#### C. Sprint 3: Autenticación Firebase y bases de datos Firestore
+
++ Historia de usuario 5 (HU_05)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo registrarme en la aplicación y loguearme
+
+  Razón: para acceder a ella
+
++ Historia de usuario 6 (HU_06)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo ver un listado de sitios de interés en una ciudad
+
+  Razón: para tener la posibilidad de visualizar más información del sitio
+
++ Historia de usuario 7 (HU_07)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo navegar por la aplicación
+
+  Razón: para tener la posibilidad de visualizar más información del sitio
+
+#### D. Sprint 4: api-Google-Maps y persistencia local con Hive.
+
++ Historia de usuario 8 (HU_08)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo ver la ubicación del POI en Google Maps
+
+  Razón: para localizar el sitio en un mapa
+
++ Historia de usuario 9 (HU_00)
+
+  Rol: Como usuario
+
+  Funcionalidad: deseo almacenar en mis sitios favoritos
+
+  Razón: para tener la posibilidad de visualizar más información del sitio
